@@ -36,13 +36,13 @@ const HeroSection = () => {
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 p-2 relative">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-8xl font-heading text-white relative overflow-hidden">
                   <img 
-                    src="/lovable-uploads/f96645c4-2090-4276-9917-de12be4fe14e.png" 
+                    src="/lovable-uploads/b0b94c67-e38a-4c9d-a720-371565d17a66.png" 
                     alt="Ahmed S. Abdi"
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
                 {/* Rating badge */}
-                <div className="absolute -top-4 -right-4 bg-white rounded-lg p-3 shadow-lg">
+                <div className="absolute -top-4 -right-4 bg-card rounded-lg p-3 shadow-lg border border-border">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl font-bold text-primary">2+</span>
                     <div className="text-xs text-muted-foreground">
@@ -53,11 +53,11 @@ const HeroSection = () => {
                 </div>
                 
                 {/* Floating customer avatars */}
-                <div className="absolute -bottom-4 -left-4 bg-white rounded-lg p-2 shadow-lg">
+                <div className="absolute -bottom-4 -left-4 bg-card rounded-lg p-2 shadow-lg border border-border">
                   <div className="flex -space-x-2">
-                    <div className="w-8 h-8 bg-primary rounded-full border-2 border-white flex items-center justify-center text-xs text-white font-semibold">A</div>
-                    <div className="w-8 h-8 bg-accent rounded-full border-2 border-white flex items-center justify-center text-xs text-white font-semibold">S</div>
-                    <div className="w-8 h-8 bg-purple-500 rounded-full border-2 border-white flex items-center justify-center text-xs text-white font-semibold">A</div>
+                    <div className="w-8 h-8 bg-primary rounded-full border-2 border-card flex items-center justify-center text-xs text-primary-foreground font-semibold">A</div>
+                    <div className="w-8 h-8 bg-accent rounded-full border-2 border-card flex items-center justify-center text-xs text-accent-foreground font-semibold">S</div>
+                    <div className="w-8 h-8 bg-purple-500 rounded-full border-2 border-card flex items-center justify-center text-xs text-white font-semibold">A</div>
                   </div>
                   <div className="text-xs text-muted-foreground mt-1">Best Customer</div>
                 </div>

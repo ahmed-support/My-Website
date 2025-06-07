@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 240 244 248; /* Light gray background */
-    --foreground: 30 41 59; /* Dark slate text */
+    --background: 18 18 18; /* Dark background #121212 */
+    --foreground: 224 224 224; /* Off-white text #E0E0E0 */
 
-    --card: 255 255 255;
-    --card-foreground: 30 41 59;
+    --card: 30 30 30;
+    --card-foreground: 224 224 224;
 
-    --popover: 255 255 255;
-    --popover-foreground: 30 41 59;
+    --popover: 30 30 30;
+    --popover-foreground: 224 224 224;
 
-    --primary: 99 102 241; /* Indigo primary */
-    --primary-foreground: 255 255 255;
+    --primary: 26 188 156; /* Teal primary #1ABC9C */
+    --primary-foreground: 18 18 18;
 
-    --secondary: 241 245 249;
-    --secondary-foreground: 30 41 59;
+    --secondary: 40 40 40;
+    --secondary-foreground: 224 224 224;
 
-    --muted: 248 250 252;
-    --muted-foreground: 100 116 139;
+    --muted: 50 50 50;
+    --muted-foreground: 160 160 160;
 
-    --accent: 251 191 36; /* Yellow accent */
-    --accent-foreground: 30 41 59;
+    --accent: 26 188 156; /* Teal accent */
+    --accent-foreground: 18 18 18;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
-    --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 99 102 241;
+    --border: 60 60 60;
+    --input: 60 60 60;
+    --ring: 26 188 156;
 
     --radius: 0.75rem;
   }
@@ -116,20 +116,20 @@
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar for dark mode */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(241 245 249);
+  background: rgb(30 30 30);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(99 102 241);
+  background: rgb(26 188 156);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(79 70 229);
+  background: rgb(20 150 125);
 }
