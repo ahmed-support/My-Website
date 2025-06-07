@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "./ThemeToggle";
 
 interface NavigationProps {
   activeSection: string;
@@ -57,6 +58,8 @@ const Navigation = ({ activeSection }: NavigationProps) => {
               </button>
             ))}
             
+            <ThemeToggle />
+            
             <Button 
               variant="default"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-2 rounded-full"
@@ -65,7 +68,8 @@ const Navigation = ({ activeSection }: NavigationProps) => {
             </Button>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button className="text-foreground hover:text-primary">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

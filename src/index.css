@@ -1,10 +1,43 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    /* Light theme */
+    --background: 255 255 255; /* White background */
+    --foreground: 15 23 42; /* Dark text */
+
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+
+    --primary: 26 188 156; /* Teal primary */
+    --primary-foreground: 255 255 255;
+
+    --secondary: 240 244 248;
+    --secondary-foreground: 15 23 42;
+
+    --muted: 248 250 252;
+    --muted-foreground: 100 116 139;
+
+    --accent: 255 165 0; /* Orange accent */
+    --accent-foreground: 255 255 255;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 26 188 156;
+
+    --radius: 0.75rem;
+  }
+
+  [data-theme="dark"] {
+    /* Dark theme */
     --background: 18 18 18; /* Dark background #121212 */
     --foreground: 224 224 224; /* Off-white text #E0E0E0 */
 
@@ -23,7 +56,7 @@
     --muted: 50 50 50;
     --muted-foreground: 160 160 160;
 
-    --accent: 255 165 0; /* Orange accent from reference */
+    --accent: 255 165 0; /* Orange accent */
     --accent-foreground: 18 18 18;
 
     --destructive: 239 68 68;
@@ -32,8 +65,6 @@
     --border: 60 60 60;
     --input: 60 60 60;
     --ring: 26 188 156;
-
-    --radius: 0.75rem;
   }
 }
 
