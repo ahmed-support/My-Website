@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 
 interface NavigationProps {
   activeSection: string;
@@ -19,10 +20,9 @@ const Navigation = ({ activeSection }: NavigationProps) => {
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "experience", label: "Experience" },
-    { id: "projects", label: "Projects" },
-    { id: "tools", label: "Tools" },
-    { id: "about", label: "About" },
+    { id: "experience", label: "About" },
+    { id: "projects", label: "Services" },
+    { id: "tools", label: "Portfolio" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -35,26 +35,33 @@ const Navigation = ({ activeSection }: NavigationProps) => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-background/95 backdrop-blur-sm border-b border-border" : "bg-transparent"
+      isScrolled ? "bg-background/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-heading font-bold text-xl text-primary">
-            Ahmed S. Abdi
+          <div className="font-heading font-bold text-2xl text-primary">
+            Ahmed
           </div>
           
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`transition-colors duration-200 hover:text-primary ${
+                className={`transition-colors duration-200 hover:text-primary font-medium ${
                   activeSection === item.id ? "text-primary" : "text-foreground/70"
                 }`}
               >
                 {item.label}
               </button>
             ))}
+            
+            <Button 
+              variant="default"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-2 rounded-full"
+            >
+              Download CV
+            </Button>
           </div>
 
           <div className="md:hidden">
