@@ -1,119 +1,142 @@
 
 const ToolsSection = () => {
-  const experiences = [
+  const toolCategories = [
     {
-      role: "Sales Coordinator",
-      company: "A.H. Alsagar & Bros Co.",
-      period: "2024 – Present",
-      description: "Providing internal IT support for office infrastructure while managing technical sales operations and customer relationships.",
-      skills: ["IT Support", "Network Troubleshooting", "Customer Service"],
-      current: true
+      category: "Operating Systems",
+      tools: [
+        { name: "Windows 10/11", icon: "🪟", level: "Advanced" },
+        { name: "Windows Server", icon: "🖥️", level: "Intermediate" },
+        { name: "Linux Basics", icon: "🐧", level: "Beginner" }
+      ]
     },
     {
-      role: "Technical Support",
-      company: "Tabliah Restaurant", 
-      period: "2022 – 2024",
-      description: "Managed POS systems, thermal printers, and network connectivity while delivering excellent customer service.",
-      skills: ["POS Systems", "Hardware Troubleshooting", "Network Configuration"],
-      current: false
+      category: "Virtualization",
+      tools: [
+        { name: "VirtualBox", icon: "📦", level: "Intermediate" },
+        { name: "VMware", icon: "☁️", level: "Beginner" },
+        { name: "Hyper-V", icon: "🔧", level: "Beginner" }
+      ]
     },
     {
-      role: "IT Enthusiast",
-      company: "Home Lab Projects",
-      period: "2022 – Present", 
-      description: "Continuously developing IT skills through hands-on practice with virtualization, networking, and system administration.",
-      skills: ["VirtualBox", "Windows Server", "PowerShell"],
-      current: true
+      category: "Networking",
+      tools: [
+        { name: "TCP/IP", icon: "🌐", level: "Intermediate" },
+        { name: "Network Troubleshooting", icon: "🔍", level: "Intermediate" },
+        { name: "IP Configuration", icon: "⚙️", level: "Advanced" }
+      ]
+    },
+    {
+      category: "Scripting & Automation",
+      tools: [
+        { name: "PowerShell", icon: "⚡", level: "Intermediate" },
+        { name: "Batch Scripts", icon: "📝", level: "Beginner" },
+        { name: "Command Line", icon: "💻", level: "Intermediate" }
+      ]
+    },
+    {
+      category: "Hardware Support",
+      tools: [
+        { name: "Printer Troubleshooting", icon: "🖨️", level: "Advanced" },
+        { name: "POS Systems", icon: "💳", level: "Advanced" },
+        { name: "Cable Testing", icon: "🔌", level: "Intermediate" }
+      ]
+    },
+    {
+      category: "Software & Applications",
+      tools: [
+        { name: "Office 365", icon: "📊", level: "Advanced" },
+        { name: "Active Directory", icon: "👥", level: "Intermediate" },
+        { name: "Remote Desktop", icon: "🖱️", level: "Intermediate" }
+      ]
     }
   ];
 
+  const getLevelColor = (level: string) => {
+    switch (level) {
+      case "Advanced": return "bg-green-500/20 text-green-400 border-green-500/30";
+      case "Intermediate": return "bg-accent/20 text-accent border-accent/30";
+      case "Beginner": return "bg-blue-500/20 text-blue-400 border-blue-500/30";
+      default: return "bg-muted text-muted-foreground";
+    }
+  };
+
   return (
-    <section id="tools" className="py-20 relative">
+    <section id="tools" className="py-20 bg-muted/30 relative">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 right-10 w-24 h-24 bg-purple-400/10 rounded-full floating-shape"></div>
         <div className="absolute bottom-1/4 left-10 w-16 h-16 bg-pink-400/10 rounded-lg rotate-45 floating-shape-delayed"></div>
+        <div className="absolute top-1/2 left-1/2 w-20 h-20 bg-accent/10 rounded-full"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 fade-in">
-          <p className="text-accent font-semibold text-lg mb-2">ABOUT ME</p>
+          <p className="text-accent font-semibold text-lg mb-2">MY EXPERTISE</p>
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-            Designing Solutions, Not Just Visuals
+            Tools & Technologies
           </h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            Proficiency levels across various IT tools and technologies gained through 
+            hands-on practice, home lab projects, and real-world troubleshooting experience.
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          {/* Left side - About content */}
-          <div className="slide-up">
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              I'm passionate about technology and helping others solve their IT challenges. 
-              My journey in IT support combines formal learning with practical, hands-on experience 
-              gained through real-world troubleshooting scenarios.
-            </p>
-
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                  01
-                </div>
-                <div>
-                  <h4 className="font-heading font-semibold text-lg mb-2">5+ Complete Project</h4>
-                  <p className="text-muted-foreground">Successfully completed various IT projects including server setups, network configurations, and troubleshooting scenarios.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                  02
-                </div>
-                <div>
-                  <h4 className="font-heading font-semibold text-lg mb-2">2+ Years of Experience</h4>
-                  <p className="text-muted-foreground">Hands-on experience in technical support roles, providing real-world problem-solving skills and customer service excellence.</p>
-                </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {toolCategories.map((category, categoryIndex) => (
+            <div 
+              key={category.category}
+              className="bg-card rounded-2xl p-6 border border-border hover:shadow-xl transition-all duration-300 card-hover slide-up"
+              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+            >
+              <h3 className="font-heading font-semibold text-xl mb-6 text-primary">
+                {category.category}
+              </h3>
+              
+              <div className="space-y-4">
+                {category.tools.map((tool, toolIndex) => (
+                  <div 
+                    key={tool.name}
+                    className="flex items-center justify-between p-3 bg-background/50 rounded-lg hover:bg-background/70 transition-colors duration-200"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">{tool.icon}</span>
+                      <span className="font-medium text-foreground">{tool.name}</span>
+                    </div>
+                    
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getLevelColor(tool.level)}`}>
+                      {tool.level}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
+          ))}
+        </div>
 
-            <div className="mt-8">
-              <button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 rounded-full transition-colors duration-300">
-                Hire Me →
-              </button>
+        {/* Learning Resources */}
+        <div className="mt-16 text-center">
+          <h3 className="font-heading font-semibold text-2xl mb-8 text-primary">
+            Learning Resources
+          </h3>
+          
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="text-3xl mb-4">🎓</div>
+              <h4 className="font-semibold text-lg mb-2">Professor Messer</h4>
+              <p className="text-muted-foreground text-sm">CompTIA A+ Course & Study Materials</p>
             </div>
-          </div>
-
-          {/* Right side - Experience timeline */}
-          <div className="space-y-6">
-            {experiences.map((exp, index) => (
-              <div 
-                key={index}
-                className="bg-card border border-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-heading font-semibold text-lg">{exp.role}</h3>
-                  {exp.current && (
-                    <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
-                      Current
-                    </span>
-                  )}
-                </div>
-                
-                <p className="text-primary font-medium mb-2">{exp.company}</p>
-                <p className="text-sm text-muted-foreground mb-3">{exp.period}</p>
-                <p className="text-muted-foreground mb-4">{exp.description}</p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {exp.skills.map((skill, skillIndex) => (
-                    <span 
-                      key={skillIndex}
-                      className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+            
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="text-3xl mb-4">📝</div>
+              <h4 className="font-semibold text-lg mb-2">Jason Dion</h4>
+              <p className="text-muted-foreground text-sm">Practice Exams & Training Materials</p>
+            </div>
+            
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="text-3xl mb-4">🏠</div>
+              <h4 className="font-semibold text-lg mb-2">Home Lab</h4>
+              <p className="text-muted-foreground text-sm">Practical Experience & Documentation</p>
+            </div>
           </div>
         </div>
       </div>

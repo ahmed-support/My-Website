@@ -20,9 +20,10 @@ const Navigation = ({ activeSection }: NavigationProps) => {
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "experience", label: "About" },
-    { id: "projects", label: "Services" },
-    { id: "tools", label: "Portfolio" },
+    { id: "experience", label: "Experience" },
+    { id: "projects", label: "Lab Projects" },
+    { id: "tools", label: "Tools" },
+    { id: "about", label: "About" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -40,7 +41,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="font-heading font-bold text-2xl text-primary">
-            Ahmed
+            Ahmed S. Abdi
           </div>
           
           <div className="hidden md:flex items-center space-x-8">

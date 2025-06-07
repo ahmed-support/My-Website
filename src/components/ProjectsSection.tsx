@@ -1,219 +1,246 @@
 
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import ProjectModal from "./ProjectModal";
-
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  tools: string[];
-  objectives: string[];
-  challenges: string[];
-  outcomes: string[];
-  demoType: "terminal" | "config" | "pdf";
-}
 
 const ProjectsSection = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  const projects: Project[] = [
+  const projects = [
     {
-      id: "windows-server",
-      title: "Windows Server Installation",
-      description: "Complete Windows Server setup and configuration in VirtualBox environment",
+      id: 1,
+      title: "Windows Server Setup",
+      description: "Installed and configured Windows Server in VirtualBox environment",
       category: "Virtualization",
-      tools: ["VirtualBox", "Windows Server", "Active Directory"],
-      objectives: [
-        "Install Windows Server in virtual environment",
-        "Configure basic server roles and features",
-        "Set up domain controller functionality",
-        "Practice enterprise-level server management"
-      ],
-      challenges: [
-        "Resource allocation and VM optimization",
-        "Network configuration between host and guest",
-        "Understanding Windows Server licensing"
-      ],
-      outcomes: [
-        "Successfully deployed Windows Server instance",
-        "Configured Active Directory Domain Services",
-        "Gained hands-on server administration experience"
-      ],
-      demoType: "config"
+      tools: ["VirtualBox", "Windows Server", "Networking"],
+      details: "Set up a complete Windows Server environment including domain controller configuration, user management, and basic networking services.",
+      challenges: "Resource allocation, network configuration, and understanding domain services",
+      outcomes: "Successfully deployed functional server environment with user authentication",
+      icon: "🖥️",
+      status: "Completed"
     },
     {
-      id: "active-directory",
-      title: "Active Directory User Management",
-      description: "User account creation, group management, and organizational unit structure",
-      category: "Directory Services",
+      id: 2,
+      title: "Active Directory Management",
+      description: "User account creation and management system implementation",
+      category: "System Administration",
       tools: ["Active Directory", "PowerShell", "Group Policy"],
-      objectives: [
-        "Create and manage user accounts",
-        "Implement organizational unit structure",
-        "Configure group policies",
-        "Practice identity and access management"
-      ],
-      challenges: [
-        "Understanding AD hierarchy and permissions",
-        "Group policy inheritance and conflicts",
-        "Bulk user management workflows"
-      ],
-      outcomes: [
-        "Implemented structured AD environment",
-        "Created automated user provisioning process",
-        "Configured security groups and permissions"
-      ],
-      demoType: "terminal"
+      details: "Implemented user lifecycle management including account creation, group assignments, and security policies.",
+      challenges: "Understanding AD structure, group policy implementation, and security best practices",
+      outcomes: "Streamlined user management process with automated workflows",
+      icon: "👥",
+      status: "Completed"
     },
     {
-      id: "printer-troubleshooting",
-      title: "Printer & IP Troubleshooting",
-      description: "Real-world printer connectivity and network troubleshooting scenarios",
+      id: 3,
+      title: "Network Troubleshooting",
+      description: "Real-world printer and POS connectivity issue resolution",
       category: "Hardware Support",
-      tools: ["Network Tools", "Printer Diagnostics", "IP Configuration"],
-      objectives: [
-        "Diagnose printer connectivity issues",
-        "Resolve IP configuration problems",
-        "Test and verify network connections",
-        "Document troubleshooting procedures"
-      ],
-      challenges: [
-        "Identifying root cause of connectivity issues",
-        "Working with different printer models",
-        "Network protocol compatibility"
-      ],
-      outcomes: [
-        "Reduced printer downtime by 80%",
-        "Created troubleshooting documentation",
-        "Improved network reliability"
-      ],
-      demoType: "pdf"
+      tools: ["IP Configuration", "Cable Testing", "Network Tools"],
+      details: "Diagnosed and resolved connectivity issues for thermal printers and POS systems in restaurant environment.",
+      challenges: "Identifying root causes of intermittent connection issues and cable management",
+      outcomes: "Reduced downtime by 80% and improved system reliability",
+      icon: "🔧",
+      status: "Ongoing"
     },
     {
-      id: "pos-connectivity",
-      title: "POS System Connectivity",
-      description: "Point-of-sale system troubleshooting and cable testing procedures",
-      category: "Hardware Support",
-      tools: ["Cable Testers", "Network Analyzers", "POS Systems"],
-      objectives: [
-        "Troubleshoot POS system connectivity",
-        "Test and verify cable integrity",
-        "Configure network settings",
-        "Minimize system downtime"
-      ],
-      challenges: [
-        "Working under time pressure",
-        "Limited access to replacement hardware",
-        "Multiple system dependencies"
-      ],
-      outcomes: [
-        "Achieved 99% POS system uptime",
-        "Implemented preventive maintenance schedule",
-        "Trained staff on basic troubleshooting"
-      ],
-      demoType: "terminal"
+      id: 4,
+      title: "PowerShell Automation",
+      description: "Information gathering and system administration scripts",
+      category: "Scripting",
+      tools: ["PowerShell", "Windows CLI", "Automation"],
+      details: "Developed PowerShell scripts for system information gathering, user management, and routine maintenance tasks.",
+      challenges: "Learning PowerShell syntax and understanding system cmdlets",
+      outcomes: "Automated repetitive tasks and improved efficiency by 60%",
+      icon: "⚡",
+      status: "In Progress"
     },
     {
-      id: "powershell-script",
-      title: "PowerShell Info-Gathering Script",
-      description: "Automated system information collection and reporting script",
-      category: "Automation",
-      tools: ["PowerShell", "WMI", "System APIs"],
-      objectives: [
-        "Automate system information gathering",
-        "Create detailed system reports",
-        "Practice PowerShell scripting",
-        "Improve IT documentation processes"
-      ],
-      challenges: [
-        "Learning PowerShell syntax and cmdlets",
-        "Handling different system configurations",
-        "Error handling and validation"
-      ],
-      outcomes: [
-        "Reduced manual documentation time by 70%",
-        "Created reusable PowerShell modules",
-        "Improved system inventory accuracy"
-      ],
-      demoType: "terminal"
+      id: 5,
+      title: "Home Lab Network",
+      description: "Multi-VM environment with network segmentation",
+      category: "Networking",
+      tools: ["VirtualBox", "pfSense", "Network Configuration"],
+      details: "Built comprehensive home lab with multiple VMs, network segmentation, and security implementations.",
+      challenges: "Resource management and understanding network topologies",
+      outcomes: "Created realistic testing environment for continuous learning",
+      icon: "🌐",
+      status: "Expanding"
+    },
+    {
+      id: 6,
+      title: "CompTIA A+ Preparation",
+      description: "Comprehensive study and practical application project",
+      category: "Certification",
+      tools: ["Professor Messer", "Jason Dion", "Practice Labs"],
+      details: "Systematic preparation for CompTIA A+ certification with hands-on practice and documentation.",
+      challenges: "Covering broad curriculum and practical application of concepts",
+      outcomes: "Strong foundation in IT fundamentals and troubleshooting methodology",
+      icon: "📚",
+      status: "In Progress"
     }
   ];
 
+  const categories = ["All", "Virtualization", "System Administration", "Hardware Support", "Scripting", "Networking", "Certification"];
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProjects = activeCategory === "All" 
+    ? projects 
+    : projects.filter(project => project.category === activeCategory);
+
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-20 relative">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 right-10 w-20 h-20 bg-accent/20 rounded-lg rotate-45 floating-shape"></div>
+        <div className="absolute bottom-1/4 left-10 w-24 h-24 bg-primary/20 rounded-full floating-shape-delayed"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 fade-in">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
-            Home Lab <span className="text-primary">Projects</span>
+          <p className="text-accent font-semibold text-lg mb-2">MY WORK</p>
+          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+            Home Lab Projects
           </h2>
-          <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-            Hands-on IT projects and real-world troubleshooting scenarios that demonstrate practical skills
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            Hands-on learning through practical IT projects, troubleshooting scenarios, 
+            and continuous skill development in my home laboratory environment.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={activeCategory === category ? "default" : "ghost"}
+              onClick={() => setActiveCategory(category)}
+              className={`rounded-full px-6 py-2 transition-all duration-300 ${
+                activeCategory === category 
+                  ? "bg-accent text-accent-foreground" 
+                  : "text-muted-foreground hover:text-foreground hover:bg-accent/10"
+              }`}
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {filteredProjects.map((project, index) => (
             <Card 
-              key={project.id} 
-              className="bg-card border-border hover:border-primary/30 transition-all duration-300 hover:scale-105 slide-up"
+              key={project.id}
+              className="bg-card border-border hover:shadow-xl transition-all duration-300 card-hover cursor-pointer group slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => setSelectedProject(project)}
             >
               <CardContent className="p-6">
-                <div className="mb-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full">
-                      {project.category}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-4xl">{project.icon}</div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    project.status === 'Completed' ? 'bg-green-500/20 text-green-400' :
+                    project.status === 'In Progress' ? 'bg-accent/20 text-accent' :
+                    project.status === 'Ongoing' ? 'bg-primary/20 text-primary' :
+                    'bg-purple-500/20 text-purple-400'
+                  }`}>
+                    {project.status}
+                  </span>
+                </div>
+                
+                <h3 className="font-heading font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                  {project.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tools.slice(0, 3).map((tool, toolIndex) => (
+                    <span 
+                      key={toolIndex}
+                      className="bg-primary/10 text-primary px-2 py-1 rounded text-xs border border-primary/20"
+                    >
+                      {tool}
                     </span>
-                  </div>
-                  <h3 className="font-heading font-semibold text-lg mb-2">{project.title}</h3>
-                  <p className="text-foreground/70 text-sm leading-relaxed">{project.description}</p>
+                  ))}
+                  {project.tools.length > 3 && (
+                    <span className="text-xs text-muted-foreground px-2 py-1">
+                      +{project.tools.length - 3} more
+                    </span>
+                  )}
                 </div>
-
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-1">
-                    {project.tools.slice(0, 3).map((tool, idx) => (
-                      <span key={idx} className="text-xs bg-secondary text-foreground/80 px-2 py-1 rounded">
-                        {tool}
-                      </span>
-                    ))}
-                    {project.tools.length > 3 && (
-                      <span className="text-xs text-foreground/60">+{project.tools.length - 3} more</span>
-                    )}
-                  </div>
-                </div>
-
-                <div className="flex gap-2">
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-accent font-medium">{project.category}</span>
                   <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+                    size="sm" 
+                    variant="ghost" 
+                    className="text-primary hover:bg-primary/10"
                   >
-                    {project.demoType === "terminal" ? "Terminal" : 
-                     project.demoType === "config" ? "Config" : "PDF"}
-                  </Button>
-                  <Button 
-                    size="sm"
-                    className="flex-1 bg-primary hover:bg-primary/90"
-                    onClick={() => setSelectedProject(project)}
-                  >
-                    Details
+                    View Details →
                   </Button>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
-      </div>
 
-      {selectedProject && (
-        <ProjectModal 
-          project={selectedProject} 
-          onClose={() => setSelectedProject(null)} 
-        />
-      )}
+        {/* Project Modal would go here - simplified for now */}
+        {selectedProject && (
+          <div 
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+            onClick={() => setSelectedProject(null)}
+          >
+            <Card className="bg-card max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+              <CardContent className="p-8">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="font-heading font-bold text-2xl">{selectedProject.title}</h3>
+                  <Button 
+                    variant="ghost" 
+                    onClick={() => setSelectedProject(null)}
+                    className="text-muted-foreground hover:text-foreground"
+                  >
+                    ✕
+                  </Button>
+                </div>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Project Details</h4>
+                    <p className="text-muted-foreground">{selectedProject.details}</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Challenges</h4>
+                    <p className="text-muted-foreground">{selectedProject.challenges}</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Outcomes</h4>
+                    <p className="text-muted-foreground">{selectedProject.outcomes}</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Tools Used</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.tools.map((tool, index) => (
+                        <span 
+                          key={index}
+                          className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+      </div>
     </section>
   );
 };

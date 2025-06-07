@@ -23,7 +23,7 @@
     --muted: 50 50 50;
     --muted-foreground: 160 160 160;
 
-    --accent: 26 188 156; /* Teal accent */
+    --accent: 255 165 0; /* Orange accent from reference */
     --accent-foreground: 18 18 18;
 
     --destructive: 239 68 68;
@@ -79,6 +79,19 @@
   .floating-shape-delayed {
     animation: float 6s ease-in-out infinite;
     animation-delay: -3s;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, rgb(26 188 156 / 0.1) 0%, rgb(255 165 0 / 0.1) 100%);
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 10px 10px -5px rgb(0 0 0 / 0.1);
   }
 }
 
