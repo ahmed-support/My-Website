@@ -1,17 +1,19 @@
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Download, Play, Star, Users, Award } from "lucide-react";
+
 const HeroSection = () => {
   const scrollToExperience = () => {
     const element = document.getElementById("experience");
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  return <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Gradient Overlay */}
@@ -58,12 +60,20 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button onClick={scrollToExperience} size="lg" className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground font-semibold px-8 py-6 text-lg rounded-2xl group transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/25">
+              <Button 
+                onClick={scrollToExperience}
+                size="lg"
+                className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground font-semibold px-8 py-6 text-lg rounded-2xl group transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/25"
+              >
                 Explore My Work
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button variant="outline" size="lg" className="px-8 py-6 text-lg rounded-2xl border-2 hover:bg-accent/10 hover:border-accent transition-all duration-300 group">
+              <Button 
+                variant="outline"
+                size="lg"
+                className="px-8 py-6 text-lg rounded-2xl border-2 hover:bg-accent/10 hover:border-accent transition-all duration-300 group"
+              >
                 <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Download CV
               </Button>
@@ -116,12 +126,28 @@ const HeroSection = () => {
               <div className="relative">
                 <div className="w-80 h-80 md:w-96 md:h-96 rounded-3xl bg-gradient-to-br from-primary/20 via-primary/10 to-accent/20 p-1 relative">
                   <div className="w-full h-full rounded-3xl bg-gradient-to-br from-primary to-accent p-1">
-                    <img src="/lovable-uploads/b0b94c67-e38a-4c9d-a720-371565d17a66.png" alt="Ahmed S. Abdi" className="w-full h-full object-cover rounded-3xl" />
+                    <img 
+                      src="/lovable-uploads/b0b94c67-e38a-4c9d-a720-371565d17a66.png" 
+                      alt="Ahmed S. Abdi"
+                      className="w-full h-full object-cover rounded-3xl"
+                    />
                   </div>
                 </div>
                 
                 {/* Floating Cards */}
-                
+                <Card className="absolute -top-6 -right-6 p-4 bg-card/90 backdrop-blur border-border/50 shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <div className="flex -space-x-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full border-2 border-card flex items-center justify-center text-xs text-primary-foreground font-bold">A</div>
+                      <div className="w-8 h-8 bg-gradient-to-br from-accent to-accent/80 rounded-full border-2 border-card flex items-center justify-center text-xs text-accent-foreground font-bold">H</div>
+                      <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full border-2 border-card flex items-center justify-center text-xs text-white font-bold">+5</div>
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-foreground">Happy Clients</div>
+                      <div className="text-xs text-muted-foreground">Satisfied with Support</div>
+                    </div>
+                  </div>
+                </Card>
                 
                 <Card className="absolute -bottom-6 -left-6 p-4 bg-card/90 backdrop-blur border-border/50 shadow-xl">
                   <div className="flex items-center gap-3">
@@ -139,6 +165,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
