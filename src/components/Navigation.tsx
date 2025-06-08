@@ -41,12 +41,12 @@ const Navigation = ({ activeSection }: NavigationProps) => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <div className="relative">
               <img 
                 src="/lovable-uploads/b4b97ae8-e97f-4bad-b509-fe147fd7df40.png" 
                 alt="Ahmed Support Logo" 
-                className="w-16 h-16 object-contain transition-all duration-300 hover:scale-105"
+                className="w-10 h-10 object-contain"
                 style={{
                   filter: 'brightness(0) saturate(100%) invert(71%) sepia(77%) saturate(1919%) hue-rotate(140deg) brightness(96%) contrast(101%)'
                 }}
