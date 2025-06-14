@@ -53,7 +53,7 @@ const Navigation = ({
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-sm shadow-lg border-b border-border" : "bg-transparent"}`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo only, no text */}
+          {/* Enhanced Logo */}
           <div className="flex items-center space-x-3">
             <button
               onClick={() => scrollToSection("home")}
@@ -61,17 +61,42 @@ const Navigation = ({
               className="group p-0 m-0 bg-transparent border-none focus:outline-none"
               style={{ lineHeight: 0 }}
             >
-              <img
-                src="/lovable-uploads/a082b239-4de5-4747-be4d-5ab07e936499.png"
-                alt="infrazemix logo IZ"
-                className="h-12 w-auto max-w-[56px] rounded-xl object-contain shadow transition-all duration-200 group-hover:shadow-[0_4px_32px_-4px_rgb(30,64,175,0.35)] group-hover:scale-105 border border-primary/30 bg-transparent"
+              <div
+                className="
+                  rounded-2xl
+                  bg-white/90
+                  dark:bg-background/90
+                  ring-1 ring-primary/30
+                  shadow-md
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                  p-1
+                  flex
+                  items-center
+                  justify-center
+                  group-hover:ring-accent
+                  group-focus:ring-accent
+                  group-hover:scale-105
+                  group-focus:scale-105
+                "
                 style={{
-                  backgroundColor: "transparent",
-                  boxShadow: "0 0 0 0 transparent"
+                  minWidth: 56,
+                  minHeight: 48,
+                  boxSizing: "border-box",
                 }}
-              />
+              >
+                <img
+                  src="/lovable-uploads/a082b239-4de5-4747-be4d-5ab07e936499.png"
+                  alt="infrazemix logo IZ"
+                  className="h-10 w-auto max-w-[44px] md:h-12 md:max-w-[56px] rounded-xl object-contain transition-all duration-200"
+                  style={{
+                    backgroundColor: "transparent",
+                    display: "block",
+                  }}
+                />
+              </div>
             </button>
-            {/* No name here anymore */}
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
