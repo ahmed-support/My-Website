@@ -7,9 +7,7 @@ const HeroSection = () => {
   const scrollToExperience = () => {
     const element = document.getElementById("experience");
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
@@ -28,7 +26,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Enhanced Hero Content */}
+          {/* Hero Content */}
           <div className="order-2 lg:order-1 space-y-8 slide-up">
             {/* Status Badge */}
             <div className="flex items-center gap-3">
@@ -109,13 +107,13 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Enhanced Profile Section */}
+          {/* Profile Section with Original Style */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Main Image Container */}
+              {/* Single clean border and subtle shadow */}
               <div className="relative flex items-center justify-center">
                 <div
-                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl relative border-4 border-primary shadow-xl bg-background flex items-center justify-center"
+                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl border-4 border-white bg-white shadow-xl flex items-center justify-center"
                   style={{
                     boxShadow: "0 6px 36px 0 rgba(26,188,156,0.08), 0 1.5px 12px 0 rgba(255,165,0,0.08)"
                   }}
@@ -124,12 +122,10 @@ const HeroSection = () => {
                     src="/lovable-uploads/ae924dad-2b6c-4a41-8d4e-63997bed15de.png"
                     alt="Ahmed S. Abdi"
                     className="rounded-2xl object-cover object-center w-full h-full border-0"
-                    style={{
-                      background: "#fff"
-                    }}
+                    style={{ background: "#fff" }}
                   />
                 </div>
-                {/* Floating Card - CompTIA */}
+                {/* Only one floating Card at bottom-left */}
                 <Card className="absolute -bottom-6 -left-6 p-4 bg-card/90 backdrop-blur border-border/50 shadow-xl">
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-gradient-to-br from-primary to-accent rounded-xl">
