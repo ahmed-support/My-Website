@@ -57,12 +57,12 @@ const Navigation = ({
           <button
             onClick={() => scrollToSection("home")}
             aria-label="Go to Home"
-            className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            className="group p-1 rounded-full transition-all duration-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <img
               src="https://i.postimg.cc/LX2dkfwB/my-logo-iz.png"
               alt="infrazemix logo"
-              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:-rotate-3"
             />
           </button>
           
