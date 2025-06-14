@@ -61,7 +61,7 @@ const Navigation = ({
           >
             <div className="rounded-full p-2 bg-gradient-to-br from-primary/10 via-background to-accent/10 border-2 border-primary/30 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-primary/20 dark:group-hover:shadow-primary/30 transition-all duration-300 ease-in-out">
               <img
-                src="/lovable-uploads/d377c26a-9ff0-4d16-9a9d-44b4e4aaa23e.png"
+                src="/lovable-uploads/17dba2a7-2caa-4534-971a-513353f22bc2.png"
                 alt="InfraZemix IZ Monogram Logo"
                 className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 ease-in-out group-hover:-rotate-6"
               />
