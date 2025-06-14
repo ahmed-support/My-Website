@@ -124,6 +124,16 @@
     transform: translateY(-8px);
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 10px 10px -5px rgb(0 0 0 / 0.1);
   }
+
+  .logo-filter {
+    /* Generated from black to #1ABC9C */
+    filter: invert(58%) sepia(86%) saturate(453%) hue-rotate(115deg) brightness(95%) contrast(85%);
+  }
+
+  .group:hover .logo-filter {
+    /* Generated from black to #FFA500 */
+    filter: invert(81%) sepia(35%) saturate(3020%) hue-rotate(345deg) brightness(102%) contrast(101%);
+  }
 }
 
 @keyframes fadeIn {
