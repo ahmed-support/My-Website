@@ -57,16 +57,12 @@ const Navigation = ({
             <button
               onClick={() => scrollToSection("home")}
               aria-label="Go to Home"
-              className="group p-2 bg-transparent border-none focus:outline-none hover:bg-background/50 rounded-2xl transition-all duration-200"
+              className="group bg-transparent border-none focus:outline-none"
             >
               <img
-                src="/lovable-uploads/a082b239-4de5-4747-be4d-5ab07e936499.png"
-                alt="infrazemix logo IZ"
-                className="h-14 w-auto md:h-16 object-contain transition-all duration-200 group-hover:scale-105 drop-shadow-sm"
-                style={{
-                  filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.1))",
-                  maxWidth: "none"
-                }}
+                src="/lovable-uploads/09145b40-0a65-4a0c-ad1c-ccbcef9b8bf7.png"
+                alt="infrazemix logo"
+                className="h-10 w-auto md:h-12 object-contain transition-all duration-200 group-hover:scale-105 drop-shadow-md"
               />
             </button>
           </div>
