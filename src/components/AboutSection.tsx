@@ -25,19 +25,20 @@ const AboutSection = () => {
     <section id="about" className="py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
+          {/* Section Header: Single Main Heading */}
           <div className="text-center mb-16 fade-in">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
               About <span className="text-primary">Me</span>
             </h2>
-            <p className="text-accent font-semibold text-base mb-2 uppercase tracking-wide">What Drives Me</p>
-            <p className="text-foreground/70 text-lg">
+            <p className="text-muted-foreground text-lg">
               My journey into IT support and continuous learning path
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="slide-up">
-              <h3 className="font-heading font-semibold text-2xl mb-6">My IT Journey</h3>
+              {/* Changed to h4, not a section heading */}
+              <h4 className="font-heading font-semibold text-xl mb-6">My IT Journey</h4>
               <div className="space-y-4 text-foreground/80 leading-relaxed">
                 <p>
                   My transition into IT support began through real-world problem-solving experiences. 
@@ -75,7 +76,8 @@ const AboutSection = () => {
             </div>
 
             <div className="slide-up" style={{ animationDelay: "0.2s" }}>
-              <h3 className="font-heading font-semibold text-2xl mb-6">Learning Resources</h3>
+              {/* Changed to h4, not a section heading */}
+              <h4 className="font-heading font-semibold text-xl mb-6">Learning Resources</h4>
               
               <div className="space-y-4">
                 {learningResources.map((resource, index) => (
@@ -83,7 +85,7 @@ const AboutSection = () => {
                     <CardContent className="p-4">
                       <div className="flex items-center justify-between">
                         <div>
-                          <h4 className="font-medium">{resource.name}</h4>
+                          <h5 className="font-medium">{resource.name}</h5>
                           <p className="text-sm text-foreground/60">{resource.type}</p>
                         </div>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -127,4 +129,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-

@@ -69,13 +69,11 @@ const ToolsSection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
+        {/* Section Header: Single Heading */}
         <div className="text-center mb-16 fade-in">
-          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-3 text-foreground">
+          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-foreground">
             Tools & Technologies
           </h2>
-          <p className="text-accent font-semibold text-base mb-2">
-            My Expertise
-          </p>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Proficiency levels across various IT tools and technologies gained through 
             hands-on practice, home lab projects, and real-world troubleshooting experience.
@@ -114,11 +112,11 @@ const ToolsSection = () => {
           ))}
         </div>
 
-        {/* Learning Resources */}
+        {/* Learning Resources SUBTITLE ONLY, not section heading */}
         <div className="mt-16 text-center">
-          <p className="font-heading font-semibold text-2xl mb-8 text-primary">
+          <h4 className="font-heading font-semibold text-xl mb-8 text-primary">
             Learning Resources
-          </p>
+          </h4>
           
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-card rounded-xl p-6 border border-border">

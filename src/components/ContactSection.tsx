@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -66,18 +65,19 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-secondary/20">
+    <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">
-            Contact <span className="text-primary">Me</span>
-          </h2>
-          <p className="text-accent font-semibold text-base mb-2">Let's Connect</p>
-          <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-            Ready to bring reliable IT support to your team. Let's discuss how I can help with your technical challenges.
-          </p>
-        </div>
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+        <div className="max-w-3xl mx-auto">
+          {/* Section Header: Single Main Heading */}
+          <div className="text-center mb-16 fade-in">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-foreground">
+              Contact
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Let's connect! Send me a message or reach out using the form below.
+            </p>
+          </div>
+
           {/* Contact Information */}
           <div className="slide-up">
             {/* Only one section heading */}
