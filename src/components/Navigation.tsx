@@ -61,13 +61,12 @@ const Navigation = ({
               className="group p-0 m-0 bg-transparent border-none focus:outline-none"
               style={{ lineHeight: 0 }}
             >
-              {/* Update this path if you have a different logo you want to use */}
               <img
-                src="/lovable-uploads/2f172f64-bed2-4643-a8e0-30c949993fa0.png"
+                src="/lovable-uploads/a082b239-4de5-4747-be4d-5ab07e936499.png"
                 alt="infrazemix logo IZ"
-                className="h-12 w-12 rounded-2xl object-cover shadow transition-all duration-200 group-hover:shadow-[0_4px_32px_-4px_rgb(26_188_156/0.25)] group-hover:scale-105 border border-primary/30 bg-white dark:bg-background"
+                className="h-12 w-auto max-w-[56px] rounded-xl object-contain shadow transition-all duration-200 group-hover:shadow-[0_4px_32px_-4px_rgb(30,64,175,0.35)] group-hover:scale-105 border border-primary/30 bg-transparent"
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: "transparent",
                   boxShadow: "0 0 0 0 transparent"
                 }}
               />
