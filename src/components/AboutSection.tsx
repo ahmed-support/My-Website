@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -28,7 +29,7 @@ const AboutSection = () => {
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">
               About <span className="text-primary">Me</span>
             </h2>
-            <p className="text-accent font-semibold text-base mb-2">WHAT DRIVES ME</p>
+            <p className="text-accent font-semibold text-base mb-2 uppercase tracking-wide">What Drives Me</p>
             <p className="text-foreground/70 text-lg">
               My journey into IT support and continuous learning path
             </p>
@@ -99,7 +100,9 @@ const AboutSection = () => {
               </div>
 
               <div className="mt-8 p-6 bg-card border border-primary/20 rounded-lg">
-                <h4 className="font-heading font-semibold text-lg mb-3 text-primary">Current Focus</h4>
+                <p className="font-heading font-semibold text-lg mb-3 text-primary">
+                  Current Focus
+                </p>
                 <ul className="space-y-2 text-foreground/80">
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
@@ -124,3 +127,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+

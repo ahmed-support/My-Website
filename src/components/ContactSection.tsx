@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,8 +24,6 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Error",
@@ -33,14 +32,10 @@ const ContactSection = () => {
       });
       return;
     }
-
-    // Simulate form submission
     toast({
       title: "Message Sent!",
       description: "Thank you for your message. I'll get back to you soon!",
     });
-
-    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -77,7 +72,7 @@ const ContactSection = () => {
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">
             Contact <span className="text-primary">Me</span>
           </h2>
-          <p className="text-accent font-semibold text-base mb-2">LET'S CONNECT</p>
+          <p className="text-accent font-semibold text-base mb-2">Let's Connect</p>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
             Ready to bring reliable IT support to your team. Let's discuss how I can help with your technical challenges.
           </p>
@@ -85,7 +80,8 @@ const ContactSection = () => {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="slide-up">
-            <h3 className="font-heading font-semibold text-2xl mb-8">Why Work With Me?</h3>
+            {/* Only one section heading */}
+            <p className="font-heading font-semibold text-2xl mb-8">Why Work With Me?</p>
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center gap-4">

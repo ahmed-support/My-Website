@@ -74,7 +74,7 @@ const ToolsSection = () => {
             Tools & Technologies
           </h2>
           <p className="text-accent font-semibold text-base mb-2">
-            MY EXPERTISE
+            My Expertise
           </p>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Proficiency levels across various IT tools and technologies gained through 
@@ -116,26 +116,26 @@ const ToolsSection = () => {
 
         {/* Learning Resources */}
         <div className="mt-16 text-center">
-          <h3 className="font-heading font-semibold text-2xl mb-8 text-primary">
+          <p className="font-heading font-semibold text-2xl mb-8 text-primary">
             Learning Resources
-          </h3>
+          </p>
           
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="text-3xl mb-4">🎓</div>
-              <h4 className="font-semibold text-lg mb-2">Professor Messer</h4>
+              <p className="font-semibold text-lg mb-2">Professor Messer</p>
               <p className="text-muted-foreground text-sm">CompTIA A+ Course & Study Materials</p>
             </div>
             
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="text-3xl mb-4">📝</div>
-              <h4 className="font-semibold text-lg mb-2">Jason Dion</h4>
+              <p className="font-semibold text-lg mb-2">Jason Dion</p>
               <p className="text-muted-foreground text-sm">Practice Exams & Training Materials</p>
             </div>
             
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="text-3xl mb-4">🏠</div>
-              <h4 className="font-semibold text-lg mb-2">Home Lab</h4>
+              <p className="font-semibold text-lg mb-2">Home Lab</p>
               <p className="text-muted-foreground text-sm">Practical Experience & Documentation</p>
             </div>
           </div>
