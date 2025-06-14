@@ -1,13 +1,17 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
+
 interface NavigationProps {
   activeSection: string;
 }
+
 const Navigation = ({
   activeSection
 }: NavigationProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -15,6 +19,7 @@ const Navigation = ({
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const navItems = [{
     id: "home",
     label: "Home"
@@ -34,6 +39,7 @@ const Navigation = ({
     id: "contact",
     label: "Contact"
   }];
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -42,25 +48,44 @@ const Navigation = ({
       });
     }
   };
-  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-sm shadow-lg border-b border-border" : "bg-transparent"}`}>
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-sm shadow-lg border-b border-border" : "bg-transparent"}`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
+          {/* Logo only, no text */}
           <div className="flex items-center space-x-3">
-            <div className="relative">
-              
-            </div>
-            <div className="font-heading font-bold text-2xl text-primary">
-              Ahmed S. Abdi
-            </div>
+            <button
+              onClick={() => scrollToSection("home")}
+              aria-label="Go to Home"
+              className="group p-0 m-0 bg-transparent border-none focus:outline-none"
+              style={{ lineHeight: 0 }}
+            >
+              {/* Update this path if you have a different logo you want to use */}
+              <img
+                src="/lovable-uploads/2f172f64-bed2-4643-a8e0-30c949993fa0.png"
+                alt="infrazemix logo IZ"
+                className="h-12 w-12 rounded-2xl object-cover shadow transition-all duration-200 group-hover:shadow-[0_4px_32px_-4px_rgb(26_188_156/0.25)] group-hover:scale-105 border border-primary/30 bg-white dark:bg-background"
+                style={{
+                  backgroundColor: "white",
+                  boxShadow: "0 0 0 0 transparent"
+                }}
+              />
+            </button>
+            {/* No name here anymore */}
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className={`transition-colors duration-200 hover:text-primary font-medium ${activeSection === item.id ? "text-primary" : "text-foreground/70"}`}>
+            {navItems.map(item => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`transition-colors duration-200 hover:text-primary font-medium ${activeSection === item.id ? "text-primary" : "text-foreground/70"}`}
+              >
                 {item.label}
-              </button>)}
-            
+              </button>
+            ))}
             <ThemeToggle />
-            
             <Button variant="default" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-2 rounded-full">
               Download CV
             </Button>
@@ -76,6 +101,8 @@ const Navigation = ({
           </div>
         </div>
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navigation;
