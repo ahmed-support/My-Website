@@ -25,8 +25,8 @@ const ExperienceSection = () => {
       role: "IT Enthusiast",
       company: "Home Lab Projects",
       period: "2022 – Present", 
-      description: "Continuously developing IT skills through hands-on practice with virtualization, networking, and system administration.",
-      skills: ["VirtualBox", "Windows Server", "PowerShell", "Active Directory"],
+      description: "Continuously developing IT skills through hands-on practice with virtualization, networking (including Cisco Packet Tracer labs), and system administration.",
+      skills: ["VirtualBox", "Windows Server", "PowerShell", "Active Directory", "Cisco Packet Tracer", "Network Simulation"],
       current: true,
       icon: "🏠"
     }

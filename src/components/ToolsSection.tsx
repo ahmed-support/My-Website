@@ -21,7 +21,8 @@ const ToolsSection = () => {
       tools: [
         { name: "TCP/IP", icon: "🌐", level: "Intermediate" },
         { name: "Network Troubleshooting", icon: "🔍", level: "Intermediate" },
-        { name: "IP Configuration", icon: "⚙️", level: "Advanced" }
+        { name: "IP Configuration", icon: "⚙️", level: "Advanced" },
+        { name: "Cisco Packet Tracer", icon: "🛡️", level: "Intermediate" }
       ]
     },
     {

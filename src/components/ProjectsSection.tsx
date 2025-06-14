@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -78,6 +77,42 @@ const ProjectsSection = () => {
       outcomes: "Strong foundation in IT fundamentals and troubleshooting methodology",
       icon: "📚",
       status: "In Progress"
+    },
+    {
+      id: 7,
+      title: "Cisco Packet Tracer: VLAN Configuration Lab",
+      description: "Designed and configured VLANs in a simulated Cisco network using Packet Tracer.",
+      category: "Networking",
+      tools: ["Cisco Packet Tracer", "Switches", "VLANs"],
+      details: "Set up and configured multiple VLANs, assigned ports, verified inter-VLAN communication, and demonstrated network segmentation.",
+      challenges: "Understanding VLAN segmentation, trunk ports, inter-VLAN routing.",
+      outcomes: "Built secure segmented networks; improved hands-on understanding of enterprise switching.",
+      icon: "🛡️",
+      status: "Completed"
+    },
+    {
+      id: 8,
+      title: "Cisco Packet Tracer: Router Configuration Lab",
+      description: "Configured and verified routing protocols on Cisco routers in Packet Tracer.",
+      category: "Networking",
+      tools: ["Cisco Packet Tracer", "Routers", "OSPF", "EIGRP"],
+      details: "Implemented OSPF and EIGRP protocols, worked on routing tables, static and dynamic routes between multiple subnets.",
+      challenges: "Routing protocol differences, troubleshooting routing issues.",
+      outcomes: "Enhanced ability to configure and test Cisco routing protocols in a virtual lab.",
+      icon: "🛠️",
+      status: "Completed"
+    },
+    {
+      id: 9,
+      title: "Cisco Packet Tracer: Network Troubleshooting Simulation",
+      description: "Diagnosed and resolved typical network issues in a Cisco Packet Tracer scenario.",
+      category: "Networking",
+      tools: ["Cisco Packet Tracer", "Troubleshooting", "Diagnostics"],
+      details: "Simulated common network connectivity problems, utilized show commands, identified misconfigurations and provided fixes.",
+      challenges: "Root cause analysis, practical troubleshooting workflow.",
+      outcomes: "Sharpened troubleshooting skills by resolving realistic Cisco network issues.",
+      icon: "🔎",
+      status: "Completed"
     }
   ];
 
