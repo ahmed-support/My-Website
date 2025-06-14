@@ -107,23 +107,27 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Profile Section with Original Style */}
+          {/* Profile Section with Gradient Border */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Single clean border and subtle shadow */}
+              {/* Clean single frame with colorful border */}
               <div className="relative flex items-center justify-center">
+                {/* Gradient border container */}
                 <div
-                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl border-4 border-white bg-white shadow-xl flex items-center justify-center"
+                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl p-[5px] bg-gradient-to-tr from-green-400 via-yellow-400 to-primary shadow-xl"
                   style={{
-                    boxShadow: "0 6px 36px 0 rgba(26,188,156,0.08), 0 1.5px 12px 0 rgba(255,165,0,0.08)"
+                    boxShadow: "0 6px 36px 0 rgba(26,188,156,0.08), 0 1.5px 12px 0 rgba(255,165,0,0.08)",
                   }}
                 >
-                  <img
-                    src="/lovable-uploads/ae924dad-2b6c-4a41-8d4e-63997bed15de.png"
-                    alt="Ahmed S. Abdi"
-                    className="rounded-2xl object-cover object-center w-full h-full border-0"
-                    style={{ background: "#fff" }}
-                  />
+                  {/* The actual profile image container with a white background */}
+                  <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
+                    <img
+                      src="/lovable-uploads/994dc36b-19c4-48b1-9546-e8b68ad511a8.png"
+                      alt="Ahmed S. Abdi"
+                      className="rounded-2xl object-cover object-center w-full h-full border-0"
+                      style={{ background: "#fff" }}
+                    />
+                  </div>
                 </div>
                 {/* Only one floating Card at bottom-left */}
                 <Card className="absolute -bottom-6 -left-6 p-4 bg-card/90 backdrop-blur border-border/50 shadow-xl">
