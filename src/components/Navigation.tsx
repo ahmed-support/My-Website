@@ -52,7 +52,19 @@ const Navigation = ({
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-sm shadow-lg border-b border-border" : "bg-transparent"}`}>
       <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-between">
+          
+          <button
+            onClick={() => scrollToSection("home")}
+            aria-label="Go to Home"
+            className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+          >
+            <img
+              src="https://i.postimg.cc/LX2dkfwB/my-logo-iz.png"
+              alt="infrazemix logo"
+              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </button>
           
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map(item => (
