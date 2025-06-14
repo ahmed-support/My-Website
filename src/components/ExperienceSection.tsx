@@ -42,11 +42,12 @@ const ExperienceSection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
+        {/* Professional/consistent section header */}
         <div className="text-center mb-16 fade-in">
-          <p className="text-accent font-semibold text-lg mb-2">MY JOURNEY</p>
-          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-3 text-foreground">
             Professional Experience
           </h2>
+          <p className="text-accent font-semibold text-base mb-2">MY JOURNEY</p>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Building expertise through hands-on experience in IT support, troubleshooting, 
             and customer service across different environments.
@@ -114,3 +115,4 @@ const ExperienceSection = () => {
 };
 
 export default ExperienceSection;
+
