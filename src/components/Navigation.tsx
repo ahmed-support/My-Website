@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
@@ -60,11 +61,13 @@ const Navigation = ({
           >
             <div className="rounded-full p-2 bg-gradient-to-br from-primary/10 via-background to-accent/10 border-2 border-primary/30 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-primary/20 dark:group-hover:shadow-primary/30 transition-all duration-300 ease-in-out">
               <img
-                src="/lovable-uploads/f96645c4-2090-4276-9917-de12be4fe14e.png"
+                src="https://i.postimg.cc/LX2dkfwB/my-logo-iz.png"
                 alt="InfraZemix IZ Monogram Logo"
                 className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 ease-in-out group-hover:-rotate-6"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null; // prevent infinite loops
+                  target.src = '/lovable-uploads/f96645c4-2090-4276-9917-de12be4fe14e.png';
                 }}
               />
             </div>
