@@ -61,7 +61,7 @@ const Navigation = ({
             <img
               src="https://i.postimg.cc/LX2dkfwB/my-logo-iz.png"
               alt="InfraZemix IZ Monogram Logo"
-              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:-rotate-6 logo-filter"
+              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:scale-105 logo-filter"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.onerror = null; // prevent infinite loops
