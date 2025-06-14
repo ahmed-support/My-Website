@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -75,19 +74,18 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-secondary/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 fade-in">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
-            Get In <span className="text-primary">Touch</span>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">
+            Contact <span className="text-primary">Me</span>
           </h2>
+          <p className="text-accent font-semibold text-base mb-2">LET'S CONNECT</p>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
             Ready to bring reliable IT support to your team. Let's discuss how I can help with your technical challenges.
           </p>
         </div>
-
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="slide-up">
-            <h3 className="font-heading font-semibold text-2xl mb-8">Let's Connect</h3>
-            
+            <h3 className="font-heading font-semibold text-2xl mb-8">Why Work With Me?</h3>
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center gap-4">
@@ -113,7 +111,6 @@ const ContactSection = () => {
 
             <Card className="bg-card border-border">
               <CardContent className="p-6">
-                <h4 className="font-heading font-semibold text-lg mb-4">Why Work With Me?</h4>
                 <ul className="space-y-3 text-foreground/80">
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>

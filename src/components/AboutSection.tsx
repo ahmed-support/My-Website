@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -26,9 +25,10 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 fade-in">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3">
               About <span className="text-primary">Me</span>
             </h2>
+            <p className="text-accent font-semibold text-base mb-2">WHAT DRIVES ME</p>
             <p className="text-foreground/70 text-lg">
               My journey into IT support and continuous learning path
             </p>
