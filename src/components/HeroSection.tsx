@@ -110,7 +110,6 @@ const HeroSection = () => {
           {/* Profile Section with Gradient Border */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Clean single frame with colorful border */}
               <div className="relative flex items-center justify-center">
                 {/* Gradient border container */}
                 <div
@@ -122,7 +121,7 @@ const HeroSection = () => {
                   {/* The actual profile image container with a white background */}
                   <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
                     <img
-                      src="/lovable-uploads/994dc36b-19c4-48b1-9546-e8b68ad511a8.png"
+                      src="/lovable-uploads/2f172f64-bed2-4643-a8e0-30c949993fa0.png"
                       alt="Ahmed S. Abdi"
                       className="rounded-2xl object-cover object-center w-full h-full border-0"
                       style={{ background: "#fff" }}
