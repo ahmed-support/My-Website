@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Download, Star, Users, Award } from "lucide-react";
+import { ArrowRight, Download, Play, Star, Users, Award } from "lucide-react";
 const HeroSection = () => {
   const scrollToExperience = () => {
     const element = document.getElementById("experience");
@@ -12,16 +12,17 @@ const HeroSection = () => {
       });
     }
   };
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        
         {/* Floating Elements */}
         <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-xl floating-shape"></div>
         <div className="absolute top-40 left-10 w-24 h-24 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full blur-lg floating-shape-delayed"></div>
         <div className="absolute bottom-40 right-40 w-40 h-40 bg-gradient-to-br from-primary/15 to-accent/15 rounded-2xl rotate-45 blur-2xl floating-shape"></div>
+        
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(26,188,156,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(26,188,156,0.1)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
       </div>
@@ -113,23 +114,29 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
               {/* Main Image Container */}
-              <div className="relative flex items-center justify-center">
+              <div className="relative">
                 <div
-                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl relative border-4 border-primary shadow-xl bg-background flex items-center justify-center"
+                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl p-1 relative"
                   style={{
-                    boxShadow: "0 6px 36px 0 rgba(26,188,156,0.08), 0 1.5px 12px 0 rgba(255,165,0,0.08)"
+                    // Professional multicolor/gradient border
+                    background: "linear-gradient(135deg, #1abc9c 0%, #ffa500 100%)",
+                    boxShadow: "0 6px 36px 0 rgba(26, 188, 156, 0.06), 0 1.5px 12px 0 rgba(255,165,0,0.08)"
                   }}
                 >
-                  <img
-                    src="/lovable-uploads/ae924dad-2b6c-4a41-8d4e-63997bed15de.png"
-                    alt="Ahmed S. Abdi"
-                    className="rounded-2xl object-cover object-center w-full h-full border-0"
-                    style={{
-                      background: "#fff"
-                    }}
-                  />
+                  <div className="w-full h-full rounded-3xl overflow-hidden bg-background">
+                    <img
+                      src="/lovable-uploads/025fc11e-7d1e-4851-ac76-41e69d150bb7.png"
+                      alt="Ahmed S. Abdi"
+                      className="w-full h-full object-cover object-center rounded-3xl"
+                      style={{
+                        // Ensure image fits perfectly
+                        background: "#fff"
+                      }}
+                    />
+                  </div>
                 </div>
-                {/* Floating Card - CompTIA */}
+                
+                {/* Floating Cards */}
                 <Card className="absolute -bottom-6 -left-6 p-4 bg-card/90 backdrop-blur border-border/50 shadow-xl">
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-gradient-to-br from-primary to-accent rounded-xl">
@@ -146,8 +153,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
