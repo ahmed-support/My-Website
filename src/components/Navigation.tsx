@@ -56,20 +56,18 @@ const Navigation = ({
           <button
             onClick={() => scrollToSection("home")}
             aria-label="Go to Home"
-            className="group rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
           >
-            <div className="rounded-full p-2 bg-gradient-to-br from-primary/10 via-background to-accent/10 border-2 border-primary/30 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-primary/20 dark:group-hover:shadow-primary/30 transition-all duration-300 ease-in-out">
-              <img
-                src="https://i.postimg.cc/LX2dkfwB/my-logo-iz.png"
-                alt="InfraZemix IZ Monogram Logo"
-                className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:-rotate-6 logo-filter"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.onerror = null; // prevent infinite loops
-                  target.src = '/lovable-uploads/f96645c4-2090-4276-9917-de12be4fe14e.png';
-                }}
-              />
-            </div>
+            <img
+              src="https://i.postimg.cc/LX2dkfwB/my-logo-iz.png"
+              alt="InfraZemix IZ Monogram Logo"
+              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:-rotate-6 logo-filter"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.onerror = null; // prevent infinite loops
+                target.src = '/lovable-uploads/f96645c4-2090-4276-9917-de12be4fe14e.png';
+              }}
+            />
           </button>
           
           <div className="hidden md:flex items-center space-x-8">
