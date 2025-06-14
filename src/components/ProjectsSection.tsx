@@ -133,7 +133,6 @@ const ProjectsSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 fade-in">
-          <p className="text-accent font-semibold text-lg mb-2">MY WORK</p>
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
             Home Lab Projects
           </h2>
