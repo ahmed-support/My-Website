@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -114,15 +115,28 @@ const HeroSection = () => {
             <div className="relative">
               {/* Main Image Container */}
               <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 rounded-3xl bg-gradient-to-br from-primary/20 via-primary/10 to-accent/20 p-1 relative">
-                  <div className="w-full h-full rounded-3xl bg-gradient-to-br from-primary to-accent p-1">
-                    <img src="/lovable-uploads/b0b94c67-e38a-4c9d-a720-371565d17a66.png" alt="Ahmed S. Abdi" className="w-full h-full object-cover rounded-3xl" />
+                <div
+                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl p-1 relative"
+                  style={{
+                    // Professional multicolor/gradient border
+                    background: "linear-gradient(135deg, #1abc9c 0%, #ffa500 100%)",
+                    boxShadow: "0 6px 36px 0 rgba(26, 188, 156, 0.06), 0 1.5px 12px 0 rgba(255,165,0,0.08)"
+                  }}
+                >
+                  <div className="w-full h-full rounded-3xl overflow-hidden bg-background">
+                    <img
+                      src="/lovable-uploads/025fc11e-7d1e-4851-ac76-41e69d150bb7.png"
+                      alt="Ahmed S. Abdi"
+                      className="w-full h-full object-cover object-center rounded-3xl"
+                      style={{
+                        // Ensure image fits perfectly
+                        background: "#fff"
+                      }}
+                    />
                   </div>
                 </div>
                 
                 {/* Floating Cards */}
-                
-                
                 <Card className="absolute -bottom-6 -left-6 p-4 bg-card/90 backdrop-blur border-border/50 shadow-xl">
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-gradient-to-br from-primary to-accent rounded-xl">
