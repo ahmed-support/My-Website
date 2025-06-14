@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -28,13 +27,6 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Hero Content */}
           <div className="order-2 lg:order-1 space-y-8 slide-up">
-            {/* Status Badge */}
-            <div className="flex items-center gap-3">
-              <Badge variant="secondary" className="text-sm font-medium px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
-                Available for IT Support Roles
-              </Badge>
-            </div>
             
             {/* Main Heading */}
             <div className="space-y-6">
