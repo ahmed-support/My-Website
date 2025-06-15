@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Download, Star, Users, Award } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const HeroSection = () => {
   const scrollToExperience = () => {
@@ -111,19 +110,11 @@ const HeroSection = () => {
                     boxShadow: "0 6px 36px 0 rgba(26,188,156,0.08), 0 1.5px 12px 0 rgba(255,165,0,0.08)",
                   }}
                 >
-                  {/* The actual profile image container with a white background */}
-                  <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
-                    <Avatar className="h-full w-full rounded-2xl">
-                      <AvatarImage
-                        src={`${import.meta.env.BASE_URL}lovable-uploads/025fc11e-7d1e-4851-ac76-41e69d150bb7.png`}
-                        alt="Ahmed S. Abdi"
-                        className="object-cover object-center w-full h-full rounded-2xl"
-                      />
-                      <AvatarFallback className="bg-white text-foreground text-6xl font-bold flex items-center justify-center h-full w-full rounded-2xl">
-                        ASA
-                      </AvatarFallback>
-                    </Avatar>
-                  </div>
+                  <img
+                    src={`${import.meta.env.BASE_URL}lovable-uploads/025fc11e-7d1e-4851-ac76-41e69d150bb7.png`}
+                    alt="Ahmed S. Abdi"
+                    className="object-cover object-center w-full h-full rounded-2xl"
+                  />
                 </div>
                 {/* Only one floating Card at bottom-left */}
                 <Card className="absolute -bottom-6 -left-6 p-4 bg-card/90 backdrop-blur border-border/50 shadow-xl">
