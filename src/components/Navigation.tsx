@@ -53,7 +53,6 @@ const Navigation = ({
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-sm shadow-lg border-b border-border" : "bg-transparent"}`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          
           <button
             onClick={() => scrollToSection("home")}
             aria-label="Go to Home"
@@ -62,7 +61,7 @@ const Navigation = ({
             <img
               src="https://i.postimg.cc/GhhXf736/infrazenix-logo-1.png"
               alt="InfraZenix Logo"
-              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:scale-105"
+              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:scale-105 logo-filter"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.onerror = null; // prevent infinite loops
@@ -70,7 +69,6 @@ const Navigation = ({
               }}
             />
           </button>
-          
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map(item => (
               <button
@@ -86,7 +84,6 @@ const Navigation = ({
               Download CV
             </Button>
           </div>
-
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
             <button className="text-foreground hover:text-primary">
