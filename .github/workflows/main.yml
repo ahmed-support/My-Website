@@ -1,3 +1,4 @@
+
 # Workflow to deploy the site to GitHub Pages
 # Triggering a new deployment run.
 name: Deploy Vite site to GitHub Pages
@@ -36,4 +37,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-
