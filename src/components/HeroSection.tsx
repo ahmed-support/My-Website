@@ -103,9 +103,9 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
               <div className="relative flex items-center justify-center">
-                {/* Gradient border container */}
+                {/* Gradient border container - now with overflow-hidden for single border/frame */}
                 <div
-                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl p-[5px] bg-gradient-to-tr from-green-400 via-yellow-400 to-primary shadow-xl"
+                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl p-[5px] overflow-hidden bg-gradient-to-tr from-green-400 via-yellow-400 to-primary shadow-xl"
                   style={{
                     boxShadow: "0 6px 36px 0 rgba(26,188,156,0.08), 0 1.5px 12px 0 rgba(255,165,0,0.08)",
                   }}
@@ -113,7 +113,7 @@ const HeroSection = () => {
                   <img
                     src={`${import.meta.env.BASE_URL}lovable-uploads/025fc11e-7d1e-4851-ac76-41e69d150bb7.png`}
                     alt="Ahmed S. Abdi"
-                    className="object-cover object-center w-full h-full rounded-2xl"
+                    className="object-cover object-center w-full h-full"
                   />
                 </div>
                 {/* Only one floating Card at bottom-left */}
