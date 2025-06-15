@@ -124,6 +124,17 @@
     transform: translateY(-8px);
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 10px 10px -5px rgb(0 0 0 / 0.1);
   }
+
+  .logo-filter {
+    /* Improved logo filter for light and dark mode visibility */
+    filter: invert(56%) sepia(70%) saturate(610%) hue-rotate(119deg) brightness(97%) contrast(85%);
+    /* This uses a blend of the teal primary color (#1ABC9C) in both themes */
+    transition: filter 0.3s;
+  }
+  [data-theme='dark'] .logo-filter {
+    /* Brighter for dark theme */
+    filter: invert(76%) sepia(90%) saturate(576%) hue-rotate(118deg) brightness(120%) contrast(96%);
+  }
 }
 
 @keyframes fadeIn {
