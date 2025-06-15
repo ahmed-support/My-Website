@@ -59,16 +59,39 @@ const Navigation = ({
             aria-label="Go to Home"
             className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
           >
-            <img
-              src="https://i.postimg.cc/GhhXf736/infrazenix-logo-1.png"
-              alt="InfraZenix Logo"
-              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:scale-105"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.onerror = null; // prevent infinite loops
-                target.src = '/lovable-uploads/f96645c4-2090-4276-9917-de12be4fe14e.png';
+            {/* Custom Logo: Square box with IZ text, matching site colors */}
+            <span
+              className="
+                flex items-center justify-center 
+                h-16 w-16 md:h-20 md:w-20 
+                rounded-2xl shadow-lg
+                bg-primary/90 dark:bg-background
+                border-4 border-primary
+                transition-all duration-300 ease-in-out 
+                group-hover:scale-105
+                cursor-pointer
+                select-none
+                "
+              style={{
+                // Assure sharp contrast for both modes
+                backgroundColor: "var(--primary)",
+                borderColor: "var(--primary)"
               }}
-            />
+            >
+              <span
+                className="
+                  text-4xl md:text-5xl font-heading font-bold 
+                  tracking-tighter
+                  text-primary-foreground dark:text-accent
+                  "
+                style={{
+                  fontFamily: "Montserrat, sans-serif",
+                  letterSpacing: "-.03em"
+                }}
+              >
+                IZ
+              </span>
+            </span>
           </button>
           
           <div className="hidden md:flex items-center space-x-8">
