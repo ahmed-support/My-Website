@@ -5,7 +5,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // CHANGE THIS to your repo name! Example: "/portfolio-site/"
-const base = process.env.NODE_ENV === 'production' ? "/My-Website/" : "/";
+const base = process.env.NODE_ENV === 'production' ? "/ahmed-abdi-portfolio/" : "/";
 
 export default defineConfig(({ mode }) => ({
   base,
