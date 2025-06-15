@@ -113,7 +113,7 @@ const HeroSection = () => {
                   <img
                     src={`${import.meta.env.BASE_URL}lovable-uploads/025fc11e-7d1e-4851-ac76-41e69d150bb7.png`}
                     alt="Ahmed S. Abdi"
-                    className="object-cover object-center w-full h-full"
+                    className="object-cover object-center w-full h-full rounded-[19px]"
                   />
                 </div>
                 {/* Only one floating Card at bottom-left */}
