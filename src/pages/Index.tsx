@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
-// import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/HeroSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ToolsSection from "@/components/ToolsSection";
@@ -36,7 +36,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navigation activeSection={activeSection} />
       <main>
-        {/* <HeroSection /> */}
+        <HeroSection />
         <ExperienceSection />
         <ProjectsSection />
         <ToolsSection />
