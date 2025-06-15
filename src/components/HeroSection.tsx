@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Download, Star, Users, Award } from "lucide-react";
@@ -116,7 +115,7 @@ const HeroSection = () => {
                   <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
                     <Avatar className="h-full w-full rounded-2xl">
                       <AvatarImage
-                        src="/lovable-uploads/profile%20picture.jpg"
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
                         alt="Ahmed S. Abdi"
                         className="object-cover object-center w-full h-full rounded-2xl"
                       />
