@@ -1,8 +1,9 @@
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Download, Star, Users, Award } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 const HeroSection = () => {
   const scrollToExperience = () => {
     const element = document.getElementById("experience");
@@ -113,12 +114,16 @@ const HeroSection = () => {
                 >
                   {/* The actual profile image container with a white background */}
                   <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
-                    <img
-                      src="/lovable-uploads/profile%20picture.jpg"
-                      alt="Ahmed S. Abdi"
-                      className="rounded-2xl object-cover object-center w-full h-full border-0"
-                      style={{ background: "#fff" }}
-                    />
+                    <Avatar className="h-full w-full rounded-2xl">
+                      <AvatarImage
+                        src="/lovable-uploads/profile%20picture.jpg"
+                        alt="Ahmed S. Abdi"
+                        className="object-cover object-center w-full h-full rounded-2xl"
+                      />
+                      <AvatarFallback className="bg-white text-foreground text-6xl font-bold flex items-center justify-center h-full w-full rounded-2xl">
+                        ASA
+                      </AvatarFallback>
+                    </Avatar>
                   </div>
                 </div>
                 {/* Only one floating Card at bottom-left */}
