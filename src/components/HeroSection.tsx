@@ -114,7 +114,7 @@ const HeroSection = () => {
                   {/* The actual profile image container with a white background */}
                   <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
                     <img
-                      src="/lovable-uploads/c4c4d1aa-26c2-4397-b059-fd7ab8a9cded.png"
+                      src="/lovable-uploads/profile picture.jpg"
                       alt="Ahmed S. Abdi"
                       className="rounded-2xl object-cover object-center w-full h-full border-0"
                       style={{ background: "#fff" }}
