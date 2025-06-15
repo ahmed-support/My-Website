@@ -62,7 +62,7 @@ const Navigation = ({
             <img
               src="https://i.postimg.cc/GhhXf736/infrazenix-logo-1.png"
               alt="InfraZenix Logo"
-              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:scale-105 logo-filter"
+              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:scale-105"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.onerror = null; // prevent infinite loops
