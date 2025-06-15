@@ -116,7 +116,7 @@ const HeroSection = () => {
                   <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
                     <Avatar className="h-full w-full rounded-2xl">
                       <AvatarImage
-                        src="/lovable-uploads/7249077f-24e2-4fdf-ba03-e714b3b3f682.png"
+                        src={`${import.meta.env.BASE_URL}lovable-uploads/7249077f-24e2-4fdf-ba03-e714b3b3f682.png`}
                         alt="Ahmed S. Abdi"
                         className="object-cover object-center w-full h-full rounded-2xl"
                       />
