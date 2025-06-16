@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-const base = process.env.NODE_ENV === 'production' ? "/ahmed-abdi-portfolio/" : "/";
+base: mode === 'production' ? '/ahmed-abdi-portfolio/' : '/',
 
 export default defineConfig(({ mode }) => ({
   base,
