@@ -102,26 +102,31 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
               <div className="relative flex items-center justify-center">
-                {/* Gradient border container with single frame logic */}
+                {/* Gradient border container with true border approach */}
                 <div
-                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl p-[5px] overflow-hidden bg-gradient-to-tr from-green-400 via-yellow-400 to-primary shadow-xl"
+                  className="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden relative shadow-xl"
                   style={{
                     boxShadow: "0 6px 36px 0 rgba(26,188,156,0.08), 0 1.5px 12px 0 rgba(255,165,0,0.08)",
                   }}
                 >
-                  <img
-                    src={`${import.meta.env.BASE_URL}lovable-uploads/025fc11e-7d1e-4851-ac76-41e69d150bb7.png`}
-                    alt="Ahmed S. Abdi"
-                    className="object-cover object-center w-full h-full"
-                    draggable={false}
+                  {/* Gradient border using pseudo-element */}
+                  <div 
+                    className="absolute inset-0 rounded-3xl"
                     style={{
-                      display: "block",
-                      // Ensure image has NO border radius, shadow, or background.
-                      borderRadius: 0,
-                      background: "transparent",
-                      boxShadow: "none"
+                      background: "linear-gradient(45deg, #22c55e, #fbbf24, #1abc9c)",
+                      padding: "5px"
                     }}
-                  />
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}lovable-uploads/025fc11e-7d1e-4851-ac76-41e69d150bb7.png`}
+                      alt="Ahmed S. Abdi"
+                      className="object-cover object-center w-full h-full rounded-3xl"
+                      draggable={false}
+                      style={{
+                        display: "block"
+                      }}
+                    />
+                  </div>
                 </div>
                 {/* Only one floating Card at bottom-left */}
                 <Card className="absolute -bottom-6 -left-6 p-4 bg-card/90 backdrop-blur border-border/50 shadow-xl">
