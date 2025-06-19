@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Download, Star, Users, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const scrollToExperience = () => {
@@ -51,9 +52,11 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button variant="outline" size="lg" className="px-8 py-6 text-lg rounded-2xl border-2 hover:bg-accent/10 hover:border-accent transition-all duration-300 group">
-                <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Download CV
+              <Button variant="outline" size="lg" asChild className="px-8 py-6 text-lg rounded-2xl border-2 hover:bg-accent/10 hover:border-accent transition-all duration-300 group">
+                <Link to="/cv">
+                  <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  Download CV
+                </Link>
               </Button>
             </div>
 

@@ -83,6 +83,73 @@
   }
 }
 
+/* Print Styles for CV */
+@media print {
+  @page {
+    size: A4;
+    margin: 0.5in;
+  }
+
+  .cv-container {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.4;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cv-container h1 {
+    font-size: 24pt;
+    color: #1a7a6b !important;
+  }
+
+  .cv-container h2 {
+    font-size: 18pt;
+    color: #1a7a6b !important;
+  }
+
+  .cv-container h3 {
+    font-size: 14pt;
+    color: #1a7a6b !important;
+    border-bottom: 1px solid #1a7a6b !important;
+  }
+
+  .cv-container h4 {
+    font-size: 13pt;
+    color: black !important;
+  }
+
+  .print\\:hidden {
+    display: none !important;
+  }
+
+  .cv-container img {
+    max-width: 120px !important;
+    max-height: 120px !important;
+  }
+
+  /* Ensure proper page breaks */
+  .cv-container section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Force black text for print */
+  .cv-container * {
+    color: black !important;
+  }
+
+  .cv-container .text-teal-600 {
+    color: #1a7a6b !important;
+  }
+
+  .cv-container .border-teal-600 {
+    border-color: #1a7a6b !important;
+  }
+}
+
 @layer utilities {
   .fade-in {
     animation: fadeIn 0.6s ease-in-out;
