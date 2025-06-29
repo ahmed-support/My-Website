@@ -10,7 +10,8 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const basename = import.meta.env.PROD ? "/ahmed-abdi-portfolio/" : "/";
+  const basename = import.meta.env.BASE_URL;
+
   console.log(`[App] Using basename: ${basename}`);
 
   return (
