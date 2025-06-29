@@ -36,6 +36,11 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navigation activeSection={activeSection} />
       <main>
+<p style={{ color: "white", padding: "2rem" }}>
+  ✅ Hello! This is a test message from Index.tsx
+</p>
+
+        
         <HeroSection />
         <ExperienceSection />
         <ProjectsSection />
