@@ -33,7 +33,8 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div style={{ minHeight: "100vh", background: "#222", color: "#fff", padding: "2rem" }}>
+
       <Navigation activeSection={activeSection} />
       <main>
 <p style={{ color: "white", padding: "2rem" }}>
