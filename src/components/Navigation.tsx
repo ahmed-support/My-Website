@@ -63,7 +63,6 @@ const Navigation = ({
               alt="InfraZenix Logo"
               className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:scale-105 logo-filter"
               
-              }}
             />
           </button>
           <div className="hidden md:flex items-center space-x-8">
