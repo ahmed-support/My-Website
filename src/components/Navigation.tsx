@@ -59,13 +59,10 @@ const Navigation = ({
             className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
           >
             <img
-              src="https://i.postimg.cc/GhhXf736/infrazenix-logo-1.png"
+              src="/infrazenix-logo.svg"
               alt="InfraZenix Logo"
               className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:scale-105 logo-filter"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.onerror = null; // prevent infinite loops
-                target.src = '/lovable-uploads/f96645c4-2090-4276-9917-de12be4fe14e.png';
+              
               }}
             />
           </button>
