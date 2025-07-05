@@ -59,7 +59,7 @@ const Navigation = ({
             className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
           >
             <img
-              src="/infrazenix.svg"
+              src="/infrazenix-logo.svg"
               alt="InfraZenix Logo"
               className="h-16 md:h-20 w-auto object-contain transition-all duration-300 ease-in-out group-hover:scale-105 logo-filter"
               
